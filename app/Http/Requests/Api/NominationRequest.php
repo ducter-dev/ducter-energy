@@ -27,7 +27,24 @@ class NominationRequest extends FormRequest
             'anio' => ['required','numeric','digits:4'],
             'mes' => ['required','numeric','digits:2'],
             'nominacion' => ['required', 'integer'],
-            'createMany' => ['required', 'array'],
+            'days' => ['required', 'array'],
+        ];
+    }
+
+     /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            'terminal' => 'Terminal',
+            'unidadNeg' => 'Unidad Neg',
+            'anio' => 'Año',
+            'mes' => 'Mes',
+            'nominacion' => 'Nominacion',
+            'days' => 'Dias',
         ];
     }
 }

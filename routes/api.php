@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\EquipmentController;
 use App\Http\Controllers\Api\NominationController;
 use App\Http\Controllers\Api\OperatorController;
 use Illuminate\Http\Request;
@@ -30,6 +31,9 @@ Route::prefix('v1')->group(function () {
 
     Route::post('/operators', [OperatorController::class,'index']);
     Route::post('/operators/create', [OperatorController::class,'store']);
+
+    Route::post('/equipments', [EquipmentController::class,'index']);
+    Route::post('/equipments/create', [EquipmentController::class,'store']);
 
 });
 

@@ -33,4 +33,20 @@ class OperatorRequest extends FormRequest
             'identificacion' => ['required'],
         ];
     }
+
+     /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            'terminal' => 'Terminal',
+            'nombre_operador' => 'Nombre operador',
+            'grupo' => 'Grupo',
+            'telefonoOperador' => 'Telefono operador',
+            'identificacion' => 'Identificacion'
+        ];
+    }
 }

@@ -40,7 +40,7 @@ class OperatorController extends Controller
         $db->beginTransaction();
 
         try {
-            $monthlyNomination = Operator::on($terminal)->create([
+            $operator = Operator::on($terminal)->create([
                 'id_operador' => round(microtime(true) * 1000),
                 'nombre_operador' => $request->get('nombre_operador'),
                 'grupo' => $request->get('grupo'),
@@ -48,7 +48,7 @@ class OperatorController extends Controller
                 'identificacion'  => $request->get('identificacion'),
             ]);
             $db->commit();
-            return $this->success('Registro guardado correctamente.', $monthlyNomination);
+            return $this->success('Registro guardado correctamente.', $operator);
         } catch (\Exception $e) {
             Log::error("Error al guardar el registro, error:{$e->getMessage()}.");
             $db->rollBack();
