@@ -63,6 +63,46 @@ return [
             ]) : [],
         ],
 
+        'tpa' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL_TPA'),
+            'host' => env('DB_HOST_TPA', '127.0.0.1'),
+            'port' => env('DB_PORT_TPA', '3306'),
+            'database' => env('DB_DATABASE_TPA', 'forge'),
+            'username' => env('DB_USERNAME_TPA', 'forge'),
+            'password' => env('DB_PASSWORD_TPA', ''),
+            'unix_socket' => env('DB_SOCKET_TPA', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA_TPA'),
+            ]) : [],
+        ],
+
+        'irge' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL_IRGE'),
+            'host' => env('DB_HOST_IRGE', '127.0.0.1'),
+            'port' => env('DB_PORT_IRGE', '3306'),
+            'database' => env('DB_DATABASE_IRGE', 'forge'),
+            'username' => env('DB_USERNAME_IRGE', 'forge'),
+            'password' => env('DB_PASSWORD_IRGE', ''),
+            'unix_socket' => env('DB_SOCKET_IRGE', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA_IRGE'),
+            ]) : [],
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
