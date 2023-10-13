@@ -46,7 +46,7 @@ class EquipmentRequest extends FormRequest
     public function attributes()
     {
         return [
-            'Terminal' => 'terminal',
+            'terminal' => 'Terminal',
             'pg' => 'PG',
             'grupo' => 'Grupo',
             'comercializadora' => 'Comercializadora',

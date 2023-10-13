@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AccessController;
 use App\Http\Controllers\Api\EquipmentController;
 use App\Http\Controllers\Api\NominationController;
 use App\Http\Controllers\Api\OperatorController;
@@ -34,6 +35,9 @@ Route::prefix('v1')->group(function () {
 
     Route::post('/equipments', [EquipmentController::class,'index']);
     Route::post('/equipments/create', [EquipmentController::class,'store']);
+
+    Route::post('/search/access', [AccessController::class,'index']);
+    Route::put('/access/{id}/update', [AccessController::class,'update']);
 
 });
 
