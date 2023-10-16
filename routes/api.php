@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\Api\AccessController;
+use App\Http\Controllers\Api\BasculeReportController;
 use App\Http\Controllers\Api\EquipmentController;
 use App\Http\Controllers\Api\NominationController;
 use App\Http\Controllers\Api\OperatorController;
+use App\Http\Controllers\Api\RDCReportController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +40,9 @@ Route::prefix('v1')->group(function () {
 
     Route::post('/search/access', [AccessController::class,'index']);
     Route::put('/access/{id}/update', [AccessController::class,'update']);
+
+    Route::post('/rdc', RDCReportController::class);
+    Route::post('/bascule', BasculeReportController::class);
 
 });
 
