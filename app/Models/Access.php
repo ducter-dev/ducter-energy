@@ -36,7 +36,7 @@ class Access extends Model
      * @var array
      */
     protected $fillable = [
-        'claveAccesso',
+        'claveAcceso',
         'fechaLlegada',
         'fechaReporte',
         'pg',
@@ -56,5 +56,6 @@ class Access extends Model
         'presion',
         'programa',
         'numVista',
+        'id_programa_energy',
     ];
 }

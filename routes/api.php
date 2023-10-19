@@ -39,6 +39,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/equipments/create', [EquipmentController::class,'store']);
 
     Route::post('/search/access', [AccessController::class,'index']);
+    Route::post('/access/create', [AccessController::class,'create']);
     Route::put('/access/{id}/update', [AccessController::class,'update']);
 
     Route::post('/rdc', RDCReportController::class);
